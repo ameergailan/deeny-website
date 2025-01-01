@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Apps - Rezmou.inc</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation (same as other pages) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                    <div class="logo-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <span class="logo-text">Rezmou.inc</span>
+                </div>
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="search" placeholder="Search our projects" class="search-input">
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="language-selector">
+                    <span>🇺🇸</span>
+                    <span>English | English</span>
+                </div>
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn btn-outline">Contact Us</button>
+                <button class="btn btn-primary">Get Started</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Apps Content -->
+    <main class="portfolio-container">
+        <div class="portfolio-header">
+            <h1 class="portfolio-title">Mobile Applications</h1>
+            <p class="portfolio-subtitle">Discover our collection of innovative mobile solutions</p>
+        </div>
+
+        <div class="app-grid">
+            <div class="app-card">
+                <div class="app-preview">
+                    <img src="deeny.png" alt="Deeny App Screenshot">
+                </div>
+                <div class="app-info">
+                    <h2>Deeny - Your Islamic Companion</h2>
+                    <div class="app-badges">
+                        <span class="badge">iOS</span>
+                        <span class="badge">Android</span>
+                        <span class="badge">AI-Powered</span>
+                    </div>
+                    <p>Strengthen your connection with Islam through AI-powered Quran understanding, 
+                       comprehensive Islamic teachings, and instant answers to your questions.</p>
+                    <div class="app-features">
+                        <div class="feature">
+                            <i class="fas fa-robot"></i>
+                            <span>AI-Powered Quran Tafsir & Translation</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-book-open"></i>
+                            <span>Interactive Islamic Lessons</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-comments"></i>
+                            <span>Islamic Scholar Chatbot</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <span>Prayer Times & Qibla Direction</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Ramadan & Islamic Calendar</span>
+                        </div>
+                    </div>
+                    <div class="app-actions">
+                        <button class="btn btn-primary">Download Now</button>
+                        <div class="app-legal">
+                            <button onclick="window.location.href='deeny-terms.html'" class="btn btn-text btn-sm">Deeny Terms</button>
+                            <span class="legal-divider">•</span>
+                            <button onclick="window.location.href='deeny-privacy.html'" class="btn btn-text btn-sm">Privacy Policy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-card">
+                <div class="app-preview">
+                    <img src="https://via.placeholder.com/300x600" alt="App Screenshot">
+                </div>
+                <div class="app-info">
+                    <h2>EcoTravel</h2>
+                    <div class="app-badges">
+                        <span class="badge">iOS</span>
+                        <span class="badge">Android</span>
+                    </div>
+                    <p>Sustainable travel planning app with carbon footprint tracking and eco-friendly recommendations.</p>
+                    <div class="app-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Carbon Footprint Calculator</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Eco-friendly Route Planning</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Sustainable Hotel Booking</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as other pages) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-buttons">
+                <button onclick="window.location.href='/tos'" class="btn btn-text">Terms of Service</button>
+                <span class="footer-divider">•</span>
+                <button onclick="window.location.href='/privacy'" class="btn btn-text">Privacy Policy</button>
+            </div>
+            <p class="footer-copyright">&copy; 2024 Rezmou.inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Same theme toggle script as other pages
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.remove('light');
+            document.documentElement.classList.add('dark');
+            document.querySelector('.theme-toggle i').classList.remove('fa-moon');
+            document.querySelector('.theme-toggle i').classList.add('fa-sun');
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeIcon = document.querySelector('.theme-toggle i');
+            
+            if (html.classList.contains('light')) {
+                html.classList.remove('light');
+                html.classList.add('dark');
+                themeIcon.classList.remove('fa-moon');
+                themeIcon.classList.add('fa-sun');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                html.classList.remove('dark');
+                html.classList.add('light');
+                themeIcon.classList.remove('fa-sun');
+                themeIcon.classList.add('fa-moon');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+    </script>
+</body>
+</html> 

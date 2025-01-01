@@ -3,14 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rezmou.inc</title>
+    <title>Portfolio - Rezmou.inc</title>
     <link rel="stylesheet" href="styles.css">
-    <meta name="description" content="Transform your ideas into powerful applications">
-    <!-- Add Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Navigation (same as index.html) -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-left">
@@ -39,53 +37,40 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <main class="hero">
-        <div class="hero-content">
-            <h1>Transform Your Ideas into<br>Powerful Applications</h1>
-            <p>We specialize in creating innovative, scalable, and user-friendly applications. 
-               From concept to deployment, we bring your vision to life with cutting-edge 
-               technology and exceptional design.</p>
-            <div class="hero-buttons">
-                <button onclick="window.location.href='portfolio.html'" class="btn btn-primary btn-large">View Our Portfolio</button>
-                <button class="btn btn-outline btn-large">Schedule Consultation</button>
-            </div>
-        </div>
-
-        <!-- Development Preview -->
-        <div class="dev-preview">
-            <div class="phone-frame">
-                <div class="phone-notch"></div>
-                <div class="phone-screen">
-                    <div class="code-block">
-                        <pre class="code green-text">
-// Welcome to Rezmou.inc
-const project = new App({
-    client: 'Your Business',
-    type: 'Mobile App',
-    status: 'In Development'
-});</pre>
-                    </div>
-                    <div class="code-block code-right">
-                        <pre class="code blue-text">
-project.features.add([
-    'Custom UI/UX',
-    'Cloud Integration',
-    'Real-time Updates'
-]);</pre>
-                    </div>
-                    <div class="code-block">
-                        <pre class="code green-text">
-// Project Status: 85% Complete
->> Deploying to production...
->> Running final tests...</pre>
-                    </div>
+    <!-- Portfolio Content -->
+    <main class="portfolio-container">
+        <h1 class="portfolio-title">Our Projects</h1>
+        <div class="portfolio-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-mobile-alt"></i>
                 </div>
+                <h3>Mobile App Development</h3>
+                <p>Cross-platform mobile applications built with React Native</p>
+                <button onclick="window.location.href='mobile-apps.html'" class="btn btn-primary">View Details</button>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>Web Applications</h3>
+                <p>Modern web applications using Next.js and React</p>
+                <button class="btn btn-primary">View Details</button>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Backend Systems</h3>
+                <p>Scalable backend solutions with Node.js and Python</p>
+                <button class="btn btn-primary">View Details</button>
             </div>
         </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (same as index.html) -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-buttons">
@@ -98,7 +83,7 @@ project.features.add([
     </footer>
 
     <script>
-        // Check for saved theme preference
+        // Same theme toggle script as index.html
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.classList.remove('light');
             document.documentElement.classList.add('dark');

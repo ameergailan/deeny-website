@@ -1,16 +1,5 @@
 :root {
-    /* Light theme variables */
-    --bg-gradient: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
-    --text-color: #333;
-    --nav-bg: white;
-    --nav-border: #e5e7eb;
-    --search-border: #e5e7eb;
-    --btn-outline-border: #e5e7eb;
-    --btn-outline-hover: #f8fafc;
-}
-
-/* Dark theme variables */
-.dark {
+    /* Remove light theme variables and keep only dark theme colors */
     --bg-gradient: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
     --text-color: #ffffff;
     --nav-bg: #2d2d2d;
@@ -19,6 +8,8 @@
     --btn-outline-border: #404040;
     --btn-outline-hover: #363636;
 }
+
+/* Remove all .dark class styles since everything will be dark by default */
 
 * {
     margin: 0;
@@ -162,7 +153,7 @@ body {
 }
 
 .btn-outline:hover {
-    background: var(--btn-outline-hover);
+    background: #363636;
 }
 
 .btn-large {
@@ -301,4 +292,335 @@ body {
 
 .code-block {
     background: #363636;
+}
+
+/* Add these styles at the end of your CSS file */
+
+.footer {
+    width: 100%;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 1px solid var(--nav-border);
+}
+
+.footer-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+}
+
+.btn-text:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.footer-divider {
+    color: var(--text-color);
+    opacity: 0.5;
+}
+
+.footer-copyright {
+    color: var(--text-color);
+    opacity: 0.6;
+    font-size: 0.875rem;
+}
+
+/* Add this to your dark theme styles */
+.dark .footer {
+    border-color: var(--nav-border);
+}
+
+/* Portfolio Styles */
+.portfolio-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 4rem 1rem;
+}
+
+.portfolio-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.project-card {
+    background: var(--nav-bg);
+    border: 1px solid var(--nav-border);
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(to right, #2563eb, #4f46e5);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-image i {
+    font-size: 2rem;
+    color: white;
+}
+
+.project-card h3 {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.project-card p {
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+}
+
+/* Add these new styles for the mobile apps page */
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.portfolio-subtitle {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
+
+.app-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.app-card {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    background: #2d2d2d;
+    border: 1px solid #404040;
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.app-preview img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    max-height: 600px;
+}
+
+.app-info h2 {
+    font-size: 1.75rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.app-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.badge {
+    background: #363636;
+    color: var(--text-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    border: 1px solid #404040;
+}
+
+.app-features {
+    margin: 1.5rem 0;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.feature i {
+    color: #34d399;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .app-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .app-preview {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+/* Optional: Add a specific style for the Deeny preview if needed */
+.app-card:first-child .app-preview img {
+    border: 1px solid var(--nav-border);
+}
+
+/* Add these styles for the app legal section */
+.app-actions {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.app-legal {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.legal-divider {
+    color: var(--text-color);
+    opacity: 0.5;
+    font-size: 0.75rem;
+}
+
+.btn-sm {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+/* Update hover effect for small text buttons */
+.btn-text.btn-sm:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* Responsive design update */
+@media (max-width: 768px) {
+    .app-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+/* Terms of Service Styles */
+.terms-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.terms-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.terms-header h1 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.terms-date {
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.terms-content {
+    color: var(--text-color);
+    line-height: 1.7;
+}
+
+.terms-intro {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: #2d2d2d;
+    border: 1px solid #404040;
+    border-radius: 0.5rem;
+}
+
+.terms-section {
+    margin-bottom: 2rem;
+}
+
+.terms-section h2 {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.terms-section ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.terms-section li {
+    margin-bottom: 0.5rem;
+}
+
+.terms-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--nav-border);
+    text-align: center;
+    font-style: italic;
+}
+
+/* Add hover states for better visibility */
+.btn-outline:hover {
+    background: #363636;
+}
+
+.btn-text:hover {
+    opacity: 1;
 }
